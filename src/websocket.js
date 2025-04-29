@@ -1,5 +1,5 @@
 module.exports = class WebSocketWrapper {
-  constructor(address, port, secure = true) {
+  constructor(address, port, secure = false) {
     this._address = address;
     this._port = port;
     this._secure = secure; // Add secure flag
