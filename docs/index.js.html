@@ -55,6 +55,17 @@ class OpenSpaceApi {
   }
 
   /**
+   * Construct an instance of the WebSocketWrapper.
+   * @param {string} address - The WebSocket server address.
+   * @param {number} port - The WebSocket server port.
+   * @param {boolean} [secure=false] - Whether to use WSS (secure WebSocket). 
+   *                                   Defaults to `false` if not provided.
+   */
+  constructor(address, port, secure = false) {
+    // ...existing code...
+  }
+
+  /**
    * Set connect callback.
    * @param {function} callback - The function to execute when connection is established.
    */

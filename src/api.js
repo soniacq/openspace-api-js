@@ -5,9 +5,9 @@ class OpenSpaceApi {
   /**
    * Construct an instance of the OpenSpace API.
    * @param {Object} socket - An instance of Socket or WebSocket.
-   *        The socket should not be connected prior to calling this constructor.
+   * @param {boolean} [secure=false] - Whether to use WSS (secure WebSocket).
    */
-  constructor(socket) {
+  constructor(socket, secure = false) {
     this._callbacks = {};
     this._nextTopicId = 0;
 
@@ -24,6 +24,7 @@ class OpenSpaceApi {
     });
 
     this._socket = socket;
+    this._secure = secure; // Store the secure flag
   }
 
   /**
