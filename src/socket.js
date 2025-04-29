@@ -1,9 +1,10 @@
 const net = require('net');
 
 module.exports = class SocketWrapper {
-  constructor(address, port) {
+  constructor(address, port, secure = false) {
     this._address = address;
     this._port = port;    
+    this._secure = secure; // Store the secure flag
     this._client = null;
     this._onConnect = () => {};
     this._onDisconnect = () => {};
