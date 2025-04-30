@@ -1,6 +1,6 @@
 {
   "name": "openspace-api-wss-js",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "OpenSpace Socket/Websocket API bindings for JavaScript",
   "main": "src/node.js",
   "browser": {

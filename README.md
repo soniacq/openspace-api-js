@@ -1,5 +1,8 @@
-# openspace-api-js
+# openspace-api-wss-js
 JavaScript library to interface with [OpenSpace](https://github.com/OpenSpace/OpenSpace) using sockets and WebSockets.
+
+## About this library
+This is a forked version of the original [`openspace-api-js`](https://github.com/OpenSpace/openspace-api-js) library. It adds support for secure WebSocket (WSS) connections in both Node.js and browser environments.
 
 ## Work in progress
 Both the API and libary are still very much work in progress, and are subject to change.
@@ -14,7 +17,7 @@ https://github.com/OpenSpace/openspace-api-js/blob/master/examples/example.js pr
 #### Secure WebSocket Connections
 To enable secure WebSocket (`wss://`) connections in NodeJS, pass the `secure` parameter as `true`:
 ```javascript
-const openspaceApi = require('openspace-api-js');
+const openspaceApi = require('openspace-api-wss-js');
 const api = openspaceApi('localhost', 4681, true); // Enable WSS
 api.connect();
 ```
