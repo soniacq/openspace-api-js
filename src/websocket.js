@@ -25,7 +25,8 @@ module.exports = class WebSocketWrapper {
 
   connect() {
     const protocol = this._secure ? "wss://" : "ws://"; // Determine protocol
-    this._client = new WebSocket(protocol + this._address + ":" + this._port);
+    const separator = this._secure ? "/" : ":"; // Use '/' for secure, ':' otherwise
+    this._client = new WebSocket(protocol + this._address + separator + this._port);
     this._client.onopen = this._onConnect;
     this._client.onclose = this._onDisconnect;
     this._client.onmessage = this._onMessage;
